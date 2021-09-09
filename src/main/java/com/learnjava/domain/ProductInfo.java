@@ -11,7 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductInfo {
-    private String productId;
-    private List<ProductOption> productOptions;
+public class ProductInfo
+{
+	private String productId;
+	private List<ProductOption> productOptions;
 }

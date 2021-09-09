@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class Review {
-    private int noOfReviews;
-    private double overallRating;
+public class Review
+{
+	private int noOfReviews;
+	private double overallRating;
 }

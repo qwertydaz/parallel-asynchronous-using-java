@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class Inventory {
-    private int count;
+public class Inventory
+{
+	private int count;
 }

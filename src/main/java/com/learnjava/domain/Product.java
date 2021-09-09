@@ -6,12 +6,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Product {
+public class Product
+{
 
-    @NonNull
-    private String productId;
-    @NonNull
-    private ProductInfo productInfo;
-    @NonNull
-    private Review review;
+	@NonNull
+	private String productId;
+	@NonNull
+	private ProductInfo productInfo;
+	@NonNull
+	private Review review;
 }
