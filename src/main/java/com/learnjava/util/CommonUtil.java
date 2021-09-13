@@ -20,7 +20,6 @@ public class CommonUtil
 		{
 			LoggerUtil.log("Exception is :" + e.getMessage());
 		}
-
 	}
 
 	public static String transForm(String s)

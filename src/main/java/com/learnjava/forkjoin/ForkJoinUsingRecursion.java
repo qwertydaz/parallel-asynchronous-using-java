@@ -50,7 +50,7 @@ public class ForkJoinUsingRecursion extends RecursiveTask<List<String>>
 	public static void main(String[] args)
 	{
 		stopWatch.start();
-		List<String> resultList = new ArrayList<>();
+		List<String> resultList;
 		List<String> names = DataSet.namesList();
 		ForkJoinPool forkJoinPool = new ForkJoinPool();
 		ForkJoinUsingRecursion forkJoinUsingRecursion = new ForkJoinUsingRecursion(names);
