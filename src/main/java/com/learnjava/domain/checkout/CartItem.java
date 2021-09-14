@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CartItem
 {
-
 	private Integer itemId;
 	private String itemName;
 	private double rate;
