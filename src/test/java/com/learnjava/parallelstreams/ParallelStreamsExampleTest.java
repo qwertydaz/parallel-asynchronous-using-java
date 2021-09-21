@@ -23,7 +23,7 @@ class ParallelStreamsExampleTest
 
 		// when
 		startTimer();
-		List<String> resultList =  parallelStreamsExample.stringTransform(inputList);
+		List<String> resultList = parallelStreamsExample.stringTransform(inputList);
 		timeTaken();
 
 		// then
@@ -43,7 +43,7 @@ class ParallelStreamsExampleTest
 
 		// when
 		startTimer();
-		List<String> resultList =  parallelStreamsExample.stringTransform(inputList, isParallel);
+		List<String> resultList = parallelStreamsExample.stringTransform(inputList, isParallel);
 		timeTaken();
 
 		// then

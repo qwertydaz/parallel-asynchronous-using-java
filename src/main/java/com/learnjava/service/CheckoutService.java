@@ -23,23 +23,24 @@ public class CheckoutService
 	public CheckoutResponse checkout(Cart cart)
 	{
 		startTimer();
+
 		List<CartItem> priceValidationList = cart.getCartItemList()
-				.stream()
-				.map(cartItem ->
+				.parallelStream()
+				.peek(cartItem ->
 				{
 					boolean isPriceInvalid = priceValidatorService.isCartItemInvalid(cartItem);
 					cartItem.setExpired(isPriceInvalid);
-					return cartItem;
 				})
 				.filter(CartItem::isExpired)
 				.collect(Collectors.toList());
+
+		timeTaken();
 
 		if (priceValidationList.size() > 0)
 		{
 			return new CheckoutResponse(CheckoutStatus.FAILURE, priceValidationList);
 		}
 
-		timeTaken();
 		return new CheckoutResponse(CheckoutStatus.SUCCESS);
 	}
 }
